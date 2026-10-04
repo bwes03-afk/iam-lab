@@ -1,0 +1,51 @@
+employeeId,firstName,lastName,email,department,title,location,managerId,startDate,status
+A00001,Danielle,Johnson,danielle.johnson@acme-lab.test,Engineering,Haematologist,Remote-US,,2022-12-24,ACTIVE
+A00002,Donald,Garcia,donald.garcia@acme-lab.test,Finance,Sports administrator,Remote-US,,2022-03-10,ACTIVE
+A00003,Robert,Johnson,robert.johnson@acme-lab.test,Sales,Engineering geologist,Remote-US,,2022-12-02,ACTIVE
+A00004,Carolyn,Hoffman,carolyn.hoffman@acme-lab.test,Engineering,Sports administrator,New York,,2023-11-08,ACTIVE
+A00005,Shane,Ramirez,shane.ramirez@acme-lab.test,Support,Accounting technician,Remote-US,,2025-07-20,ACTIVE
+A00006,Erik,Henderson,erik.henderson@acme-lab.test,Support,Health physicist,Los Gatos,A00001,2022-07-14,ACTIVE
+A00007,Susan,Rogers,susan.rogers@acme-lab.test,Engineering,Chief Executive Officer,Remote-US,A00002,2023-08-28,ACTIVE
+A00008,Michael,Cooper,michael.cooper@acme-lab.test,Sales,"Geneticist, molecular",New York,A00005,2025-10-16,ACTIVE
+A00009,Jessica,Herrera,jessica.herrera@acme-lab.test,Engineering,Multimedia specialist,New York,A00002,2022-02-23,ACTIVE
+A00010,Kelly,Fuller,kelly.fuller@acme-lab.test,Support,Medical illustrator,Los Gatos,A00002,2024-08-22,ACTIVE
+A00011,Janet,Williams,janet.williams@acme-lab.test,HR,Estate agent,New York,A00003,2025-08-15,ACTIVE
+A00012,Tracie,Wyatt,tracie.wyatt@acme-lab.test,Engineering,Chiropractor,Remote-US,A00004,2023-08-28,ACTIVE
+A00013,Shawn,Flowers,shawn.flowers@acme-lab.test,Finance,"Designer, textile",Los Gatos,A00002,2023-08-10,ACTIVE
+A00014,Jason,Adams,jason.adams@acme-lab.test,Sales,Building surveyor,Los Gatos,A00001,2024-10-19,ACTIVE
+A00015,George,Daniel,george.daniel@acme-lab.test,Engineering,"Development worker, community",Los Gatos,A00001,2024-01-25,ACTIVE
+A00016,Joseph,Schaefer,joseph.schaefer@acme-lab.test,Finance,"Surveyor, hydrographic",Los Gatos,A00005,2022-11-08,ACTIVE
+A00017,Mark,Tate,mark.tate@acme-lab.test,Finance,Banker,Remote-US,A00004,2022-11-25,ACTIVE
+A00018,Antonio,Stewart,antonio.stewart@acme-lab.test,Support,"Geologist, wellsite",Remote-US,A00004,2022-01-31,ACTIVE
+A00019,Robin,Bradley,robin.bradley@acme-lab.test,Engineering,International aid/development worker,New York,A00003,2022-10-26,ACTIVE
+A00020,Victor,Wilkerson,victor.wilkerson@acme-lab.test,Support,Proofreader,Los Gatos,A00005,2022-06-21,ACTIVE
+A00021,Donald,Mcgee,donald.mcgee@acme-lab.test,Sales,Solicitor,New York,A00001,2023-01-26,ACTIVE
+A00022,Brenda,Hurst,brenda.hurst@acme-lab.test,Engineering,Oceanographer,New York,A00002,2023-07-26,ACTIVE
+A00023,Wendy,Taylor,wendy.taylor@acme-lab.test,Finance,"Research officer, political party",Remote-US,A00002,2022-03-18,ACTIVE
+A00024,Brandon,Rodriguez,brandon.rodriguez@acme-lab.test,Engineering,"Designer, jewellery",Los Gatos,A00003,2025-09-19,ACTIVE
+A00025,Robert,Brown,robert.brown@acme-lab.test,HR,Museum/gallery curator,New York,A00003,2024-09-25,ACTIVE
+A00026,Taylor,King,taylor.king@acme-lab.test,Sales,Surgeon,Los Gatos,A00003,2026-01-22,ACTIVE
+A00027,Alexander,Le,alexander.le@acme-lab.test,Sales,Software engineer,New York,A00003,2025-07-05,ACTIVE
+A00028,Kayla,Peterson,kayla.peterson@acme-lab.test,Engineering,Hospital doctor,New York,A00002,2023-12-06,ACTIVE
+A00029,Shawn,Mckay,shawn.mckay@acme-lab.test,Support,General practice doctor,New York,A00002,2026-08-13,ACTIVE
+A00030,Kathleen,Romero,kathleen.romero@acme-lab.test,Sales,Claims inspector/assessor,Los Gatos,A00004,2026-02-09,ACTIVE
+A00031,Kenneth,Fowler,kenneth.fowler@acme-lab.test,Finance,Transport planner,New York,A00005,2022-10-01,ACTIVE
+A00032,Nathaniel,Martin,nathaniel.martin@acme-lab.test,Sales,Set designer,New York,A00003,2026-05-08,ACTIVE
+A00033,Carol,Burns,carol.burns@acme-lab.test,Engineering,Clinical research associate,Remote-US,A00001,2026-05-27,ACTIVE
+A00034,Natasha,Decker,natasha.decker@acme-lab.test,Finance,Information systems manager,Los Gatos,A00003,2022-12-14,ACTIVE
+A00035,John,Bradley,john.bradley@acme-lab.test,Engineering,Careers information officer,Remote-US,A00005,2022-03-08,ACTIVE
+A00036,Todd,Jones,todd.jones@acme-lab.test,Finance,Site engineer,Remote-US,A00004,2025-08-02,ACTIVE
+A00037,David,Alvarez,david.alvarez@acme-lab.test,HR,Stage manager,New York,A00004,2022-07-31,ACTIVE
+A00038,Allison,Obrien,allison.obrien@acme-lab.test,Sales,"Engineer, mining",Los Gatos,A00002,2026-05-27,ACTIVE
+A00039,Karina,Vaughn,karina.vaughn@acme-lab.test,Sales,Insurance underwriter,New York,A00005,2023-10-01,ACTIVE
+A00040,Emily,Brooks,emily.brooks@acme-lab.test,Support,"Scientist, forensic",Los Gatos,A00005,2024-01-05,ACTIVE
+A00041,John,Brown,john.brown@acme-lab.test,HR,Advertising art director,New York,A00004,2024-09-11,ACTIVE
+A00042,Jerry,Robinson,jerry.robinson@acme-lab.test,Finance,Building services engineer,Remote-US,A00002,2025-04-18,ACTIVE
+A00043,Brian,Jones,brian.jones@acme-lab.test,Support,Ambulance person,Los Gatos,A00001,2026-01-20,ACTIVE
+A00044,Chad,Young,chad.young@acme-lab.test,Engineering,"Radiographer, diagnostic",Remote-US,A00002,2022-10-29,ACTIVE
+A00045,David,Walls,david.walls@acme-lab.test,Sales,"Teacher, English as a foreign language",New York,A00004,2024-08-20,ACTIVE
+A00046,John,Kennedy,john.kennedy@acme-lab.test,Support,Optometrist,Remote-US,A00004,2022-09-15,ACTIVE
+A00047,Collin,Jordan,collin.jordan@acme-lab.test,HR,Pharmacologist,New York,A00004,2023-10-24,ACTIVE
+A00048,Michelle,Brown,michelle.brown@acme-lab.test,Support,Chief Technology Officer,Los Gatos,A00005,2022-01-21,ACTIVE
+A00049,Jessica,Mcbride,jessica.mcbride@acme-lab.test,Engineering,Clinical embryologist,New York,A00001,2022-12-31,ACTIVE
+A00050,James,West,james.west@acme-lab.test,Support,"Pharmacist, hospital",Los Gatos,A00003,2022-09-03,ACTIVE

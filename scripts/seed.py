@@ -8,7 +8,7 @@ DEPTS = ["Engineering", "Sales", "Finance", "HR", "Support"]
 LOCS = ["Remote-US", "Los Gatos", "New York"]
 
 acme = []
-for i in range(1, 201):
+for i in range(1, 51):
     first, last = fake.first_name(), fake.last_name()
     acme.append({
         "employeeId": f"A{i:05d}",
@@ -23,7 +23,7 @@ for i in range(1, 201):
     })
 
 globex = []
-for i in range(1, 81):
+for i in range(1, 31):
     if i <= 10:  # planted duplicates: same person as an Acme worker
         src = acme[i * 3]
         first, last = src["firstName"], src["lastName"]
