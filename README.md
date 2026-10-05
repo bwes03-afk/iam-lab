@@ -39,6 +39,22 @@ flowchart LR
 3. An Okta Workflow listens for profile updates, checks that the person is ACTIVE in HR but still Staged in Okta, and activates the account.
 4. Okta group rules grant birthright, department and location access from the profile attributes. When someone changes departments, the rules move their groups automatically.
 
+
+## Screenshots
+
+**Status-gated birthright group rules**
+![Okta group rules](docs/screenshots/group-rules.png)
+
+**Joiner flow (Okta Workflows) and a successful run**
+![Joiner flow](docs/screenshots/joiner-flow.png)
+![Joiner run](docs/screenshots/joiner-run.png)
+
+**Leaver flow and a successful run**
+![Leaver flow](docs/screenshots/leaver-flow.png)
+![Leaver run](docs/screenshots/leaver-run.png)
+
+
+
 ## Design notes and lessons learned
 
 - **HR decides when, Okta decides how.** The HR service owns the start date; Okta Workflows owns the activation logic. Each system does the job it is authoritative for.
