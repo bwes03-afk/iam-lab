@@ -17,7 +17,7 @@ The lab simulates a company (Acme) that later acquires another company (Globex) 
 | Joiner automation (Okta Workflows) | Working | New hires are created Staged, then activated automatically on their start date |
 | Birthright access (Okta group rules) | Working | Department, location and all-employee groups assigned from HR attributes |
 | Reconciliation | Working | Script compares HR against Okta and repairs drift |
-| Leaver automation | In progress | Suspend, clear sessions, remove access, deactivate after a hold period |
+| Leaver automation | Working | Suspend active users, clear sessions, remove access, deactivate after a hold period |
 | Mover access review | Planned | Flag manually granted access when someone changes departments |
 | SCIM, OIDC, OAuth, SAML, LDAP | Planned | Provision to a custom SCIM app; protect an API with OAuth scopes |
 | Acquisition migration (Auth0 to Okta) | Planned | Day-one federation, identity matching, password import hook, cutover runbook |
