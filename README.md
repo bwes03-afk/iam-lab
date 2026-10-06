@@ -19,7 +19,8 @@ The lab simulates a company (Acme) that later acquires another company (Globex) 
 | Reconciliation | Working | Script compares HR against Okta and repairs drift |
 | Leaver automation | Working | Suspend active users, clear sessions, remove access, deactivate after a hold period |
 | Mover access review | Planned | Flag manually granted access when someone changes departments |
-| SCIM, OIDC, OAuth, SAML, LDAP | Planned | Provision to a custom SCIM app; protect an API with OAuth scopes |
+| SCIM 2.0 provisioning (Java, Spring Boot) | Working | Okta creates, updates and deactivates users in a custom SCIM app; termination in HR deprovisions automatically |
+| OIDC, OAuth, SAML, LDAP | Planned | OIDC login portal; protect an API with OAuth scopes |
 | Acquisition migration (Auth0 to Okta) | Planned | Day-one federation, identity matching, password import hook, cutover runbook |
 | CI/CD on AWS | Planned | GitHub Actions, Terraform for Okta, keyless OIDC federation to AWS |
 
@@ -73,7 +74,7 @@ Okta Identity Engine, Okta Workflows, Okta group rules, Okta Users API, Java 21,
 | --- | --- |
 | `hr-source/` | Mock HR service (Spring Boot): workers, Okta client, start-date job |
 | `scripts/` | Seed data generator, HR loader, Okta reconciliation and admin scripts |
-| `scim-service/` | Planned: SCIM 2.0 provisioning server |
+| `scim-service/` | SCIM 2.0 provisioning server (bearer token auth) |
 | `migration/` | Planned: acquisition migration tooling |
 | `terraform/` | Planned: Okta and AWS as code |
 | `docs/` | Design docs, decision records and screenshots |
