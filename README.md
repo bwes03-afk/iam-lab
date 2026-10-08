@@ -21,7 +21,8 @@ The lab simulates a company (Acme) that later acquires another company (Globex) 
 | Mover access review | Planned | Flag manually granted access when someone changes departments |
 | SCIM 2.0 provisioning (Java, Spring Boot) | Working | Okta creates, updates and deactivates users in a custom SCIM app; termination in HR deprovisions automatically |
 | OIDC login portal (Java, Spring Security) | Working | Users sign in through Okta with the authorization code flow; app shows the ID token claims |
-| OAuth scopes, SAML, LDAP | Planned | Protect an API with OAuth scopes; SAML app; LDAP directory sync |
+| OAuth 2.0 scopes (client credentials) | Working | HR reporting API accepts only Auth0-issued tokens with the hr.read scope: 401 without a valid token, 403 with the wrong scope |
+| SAML, LDAP | Planned | SAML app; LDAP directory sync |
 | Acquisition migration (Auth0 to Okta) | Planned | Day-one federation, identity matching, password import hook, cutover runbook |
 | CI/CD on AWS | Planned | GitHub Actions, Terraform for Okta, keyless OIDC federation to AWS |
 
@@ -58,6 +59,8 @@ flowchart LR
 
 
 ## Design notes and lessons learned
+
+- **Machine identities can be licensed separately.** Okta issued client-credentials tokens only with an add-on license (non-human identity tokens), so the reporting job uses Auth0 as its authorization server. The API trusts any standards-compliant issuer it is configured for, which shows OAuth portability.
 
 - **HR decides when, Okta decides how.** The HR service owns the start date; Okta Workflows owns the activation logic. Each system does the job it is authoritative for.
 - **Actor versus target.** Workflows event cards expose both the actor (who made the change) and the user who was changed. Mapping the actor by mistake made the flow read the admin account instead of the new hire. Found and fixed using saved execution data.
