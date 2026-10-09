@@ -23,7 +23,7 @@ The lab simulates a company (Acme) that later acquires another company (Globex) 
 | OIDC login portal (Java, Spring Security) | Working | Users sign in through Okta with the authorization code flow; app shows the ID token claims |
 | OAuth 2.0 scopes (client credentials) | Working | HR reporting API accepts only Auth0-issued tokens with the hr.read scope: 401 without a valid token, 403 with the wrong scope |
 | SAML, LDAP | Planned | SAML app; LDAP directory sync |
-| Acquisition migration (Auth0 to Okta) | Planned | Day-one federation, identity matching, password import hook, cutover runbook |
+| Acquisition migration (Auth0 to Okta) | In progress | Day-one federation and JIT working; identity matching found 10 of 10 duplicates with an audited link log; password import hook waiting on trial license capacity. See the [cutover runbook](docs/runbook-globex-cutover.md) |
 | CI/CD on AWS | Planned | GitHub Actions, Terraform for Okta, keyless OIDC federation to AWS |
 
 ## How the joiner flow works
