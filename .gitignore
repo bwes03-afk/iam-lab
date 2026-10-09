@@ -29,3 +29,5 @@ scripts/*.csv
 hr-source/data/
 migration/*.csv
 migration/*.csv
+
+.terraform/
