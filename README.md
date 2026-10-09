@@ -106,3 +106,9 @@ set -a; source ../.env; set +a
 # 4. Load workers into HR (and Okta)
 cd ../scripts && python load_hr.py --all
 ```
+
+## Design docs
+
+- [HR-driven joiner and leaver lifecycle](docs/design-01-lifecycle.md)
+- [Okta as code with pull request review](docs/design-05-okta-as-code.md)
+- [Globex cutover runbook](docs/runbook-globex-cutover.md)
