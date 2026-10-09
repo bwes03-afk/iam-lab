@@ -27,3 +27,5 @@ replay_pid*
 .venv/
 scripts/*.csv
 hr-source/data/
+migration/*.csv
+migration/*.csv
