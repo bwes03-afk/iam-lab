@@ -6,6 +6,12 @@ terraform {
       version = "~> 7.0"
     }
   }
+  backend "s3" {
+    bucket       = "iam-lab-tfstate-750911765135"
+    key          = "okta/terraform.tfstate"
+    region       = "us-east-1"
+    use_lockfile = true
+  }
 }
 
 # Org name, base URL and API token come from environment variables
