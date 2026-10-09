@@ -1,6 +1,6 @@
 resource "okta_group" "dept_marketing" {
   name        = "dept-marketing"
-  description = "Birthright: Marketing department"
+  description = "Birthright: Marketing department (managed by Terraform)"
 }
 
 resource "okta_group_rule" "marketing_birthright" {
