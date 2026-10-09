@@ -19,7 +19,7 @@ resource "okta_group" "dept_finance" {
 resource "okta_group_rule" "finance_birthright" {
   expression_type       = "urn:okta:expression:1.0"
   expression_value      = "user.department==\"Finance\" and user.employmentStatus==\"ACTIVE\""
-  group_assignments     = ["00g18cnttjbMIHegD698"]
+  group_assignments     = [okta_group.dept_finance.id]
   name                  = "Finance birthright"
   remove_assigned_users = null
   status                = "ACTIVE"
@@ -51,7 +51,7 @@ resource "okta_group" "dept_engineering" {
 resource "okta_group_rule" "support_birthright" {
   expression_type       = "urn:okta:expression:1.0"
   expression_value      = "user.department==\"Support\" and user.employmentStatus==\"ACTIVE\""
-  group_assignments     = ["00g18cnq0ovWmpDo1698"]
+  group_assignments     = [okta_group.dept_support.id]
   name                  = "Support birthright"
   remove_assigned_users = null
   status                = "ACTIVE"
@@ -62,7 +62,7 @@ resource "okta_group_rule" "support_birthright" {
 resource "okta_group_rule" "sales_birthright" {
   expression_type       = "urn:okta:expression:1.0"
   expression_value      = "user.department==\"Sales\""
-  group_assignments     = ["00g18cnsomefBMm0t698"]
+  group_assignments     = [okta_group.dept_sales.id]
   name                  = "Sales birthright"
   remove_assigned_users = null
   status                = "ACTIVE"
@@ -73,7 +73,7 @@ resource "okta_group_rule" "sales_birthright" {
 resource "okta_group_rule" "all_active_employees_birthright" {
   expression_type       = "urn:okta:expression:1.0"
   expression_value      = "user.employmentStatus==\"ACTIVE\""
-  group_assignments     = ["00g18cns325itAblN698"]
+  group_assignments     = [okta_group.birthright_all.id]
   name                  = "All active employees birthright"
   remove_assigned_users = null
   status                = "ACTIVE"
@@ -84,7 +84,7 @@ resource "okta_group_rule" "all_active_employees_birthright" {
 resource "okta_group_rule" "remote_us_location" {
   expression_type       = "urn:okta:expression:1.0"
   expression_value      = "user.department==\"Remote-US\" and user.employmentStatus==\"ACTIVE\""
-  group_assignments     = ["00g18cnurgnldRbvt698"]
+  group_assignments     = [okta_group.loc_remote_us.id]
   name                  = "Remote US location"
   remove_assigned_users = null
   status                = "ACTIVE"
@@ -123,7 +123,7 @@ resource "okta_group" "birthright_all" {
 resource "okta_group_rule" "hr_birthright" {
   expression_type       = "urn:okta:expression:1.0"
   expression_value      = "user.department==\"HR\" and user.employmentStatus==\"ACTIVE\""
-  group_assignments     = ["00g18cnt2m67iAfjL698"]
+  group_assignments     = [okta_group.dept_hr.id]
   name                  = "HR birthright"
   remove_assigned_users = null
   status                = "ACTIVE"
@@ -134,7 +134,7 @@ resource "okta_group_rule" "hr_birthright" {
 resource "okta_group_rule" "engineering_birthright" {
   expression_type       = "urn:okta:expression:1.0"
   expression_value      = "user.department==\"Engineering\" and user.employmentStatus==\"ACTIVE\""
-  group_assignments     = ["00g18cnrm2f6fOLZe698"]
+  group_assignments     = [okta_group.dept_engineering.id]
   name                  = "Engineering birthright"
   remove_assigned_users = null
   status                = "ACTIVE"
