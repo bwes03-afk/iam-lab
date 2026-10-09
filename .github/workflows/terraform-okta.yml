@@ -1,0 +1,55 @@
+name: terraform-okta-plan
+
+on:
+  pull_request:
+    paths:
+      - "terraform/okta/**"
+      - ".github/workflows/terraform-okta.yml"
+  workflow_dispatch:
+
+permissions:
+  id-token: write   # lets the job request a GitHub OIDC token for AWS
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: terraform/okta
+    env:
+      OKTA_API_TOKEN: ${{ secrets.OKTA_API_TOKEN }}
+      OKTA_ORG_NAME: ${{ vars.OKTA_ORG_NAME }}
+      OKTA_BASE_URL: ${{ vars.OKTA_BASE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sign in to AWS with GitHub OIDC (no stored keys)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: us-east-1
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_wrapper: false
+
+      - name: Format check
+        run: terraform fmt -check -recursive
+
+      - name: Init
+        run: terraform init -input=false
+
+      - name: Validate
+        run: terraform validate
+
+      - name: Plan
+        run: |
+          set -o pipefail
+          terraform plan -input=false -no-color -lock-timeout=60s | tee plan.txt
+          {
+            echo "## Terraform plan (Okta)"
+            echo '```'
+            tail -n 40 plan.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
